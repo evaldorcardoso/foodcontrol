@@ -1,0 +1,79 @@
+.dynamicTile .col-sm-1.col-xs-2{
+    padding:5px;
+}
+
+.dynamicTile .col-sm-2.col-xs-4{
+    padding:5px;
+}
+
+.dynamicTile .col-sm-4.col-xs-8{
+    padding:5px;
+}
+
+#tile1{
+    background: rgb(239,156,0);
+}
+
+#tile2{
+    background: rgb(55,126,240);
+}
+
+#tile3{
+    background: rgb(71,193,228);
+}
+
+#tile4{
+    background: rgb(84,104,133);
+}
+
+#tile5{
+    background: rgb(85,26,63);
+}
+
+#tile6{
+    background: rgb(255,67,0);
+}
+
+#tile7{
+    background-color: rgb(148, 248, 19);
+}
+
+#tile8{
+    background: rgb(223,0,36);
+}
+
+#tile9{
+    background: rgb(0,142,0);
+}
+
+#tile10{
+    background: rgb(0,93,233);
+}
+
+.tilecaption{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); 
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Segoe UI;
+    font-weight: lighter;
+}
+
+.tilecaptiontime{
+    position: relative;
+    top: 5%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%); 
+    margin:0!important;
+    text-align: center;
+    color:white;
+    font-family: Segoe UI;
+    font-weight: lighter;
+}
+
+

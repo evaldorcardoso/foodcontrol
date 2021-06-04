@@ -1,0 +1,75 @@
+<!-- MODAL ITENS -->
+    <div class="modal fade " id="itens" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+          	<div class="panel panel-primary">
+          		<div class="panel-heading">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                      <h4 class="panel-title" id="contactLabel"><span class="glyphicon glyphicon-list-alt"></span> Itens do cardápio:</h4>
+                </div>
+          		<div class="panel-body" style="padding: 5px;">
+          			<div class="dual-list list-left col-md-5">
+            			<div class="well text-right">
+                			<div class="row">
+                    			<div class="col-md-10">
+                        		<div class="input-group">
+                            		<span class="input-group-addon glyphicon glyphicon-search"></span>
+                            		<input type="text" name="SearchDualList" class="form-control" placeholder="Procurar Bebidas" />
+                        		</div>
+                    			</div>
+                			</div>
+                			<ul class="list-group" id="list-bebidas">
+                				<?php
+                                        $cClass->pesquisartabela('item_cardapio','categoria','2');
+                                        if(0<>mysqli_num_rows($cClass->getconsulta()))
+                                        {
+                                            while($array_= mysqli_fetch_array($cClass->getconsulta()))
+                                            {
+                                              if($array_['item_tele']>0)
+                                              {
+                                              ?>
+                                              <li id="item-<?php echo $array_['id'];?>" class="list-group-item lgi"><?php echo $array_['descricao'];?></li>
+                                      <?php }}
+                                        }?>
+                			</ul>
+            			</div>
+        			</div>
+        			<div class="col-md-2 text-center">
+        			 	<label>Quantidade:</label>
+        			 	<input id="quantidade_item" class="form-control" type="number" 
+        			 	placeholder="Quantidade" value="1"/><br>
+        			 	<label>Observações:</label>
+        			 	<input id="observacoes_item" class="form-control" type="text" 
+        			 	placeholder="Obs."/><br>
+        			 	<button class="btn btn-primary" onclick="adicionarItem()">Adicionar Item</button>
+        			</div>
+        			<div class="dual-list list-right col-md-5">
+            			<div class="well">
+                			<div class="row">
+                    			<div class="col-md-10">
+                        			<div class="input-group">
+                            			<input type="text" name="SearchDualList" class="form-control" placeholder="Procurar Comidas" />
+                            			<span class="input-group-addon glyphicon glyphicon-search"></span>
+                        			</div>
+                    			</div>
+                			</div>
+                			<ul class="list-group" id="list-comidas" data-toggle="items">
+                    			<?php
+                                        $cClass->pesquisartabela('item_cardapio','categoria','1');
+                                        if(0<>mysqli_num_rows($cClass->getconsulta()))
+                                        {
+                                            while($array_= mysqli_fetch_array($cClass->getconsulta()))
+                                            {
+                                              if($array_['item_tele']>0)
+                                              {
+                                              ?>
+                                              <li id="item-<?php echo $array_['id'];?>" class="list-group-item lgi"><?php echo $array_['descricao'];?></li>
+                                      <?php }}
+                                        }?>
+                			</ul>
+            			</div>
+        			</div>
+          		</div>
+      		</div>
+      	  </div>
+    </div>
+ 

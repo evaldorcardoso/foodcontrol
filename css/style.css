@@ -1,0 +1,45 @@
+body 
+  	{
+  		padding-bottom: 40px;
+  	  /*background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/08/30/12087/3574f899daef41d2f145eba13ff7840f.jpg');*/
+      background: url('../images/wallpaper3.jpg');
+      background-size:100% 100%;
+      background-attachment: fixed; 
+      background-repeat:no-repeat;      
+	}
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+p.credit {
+  font-size: 12px; 
+  margin-bottom: 20px; 
+  color: #ccc;
+  width:100%;
+  position: relative;
+  left: 0;
+  bottom: 100;
+}
+
+/*css para abrir menu ao passar o mouse */
+      .bs-example{
+        margin: 20px;
+      }
+      .show-on-hover:hover > ul.dropdown-menu {
+    display: block;   
+  }

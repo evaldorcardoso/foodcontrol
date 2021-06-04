@@ -1,0 +1,58 @@
+<nav class="navbar navbar-default sidebar" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+    </div>
+    <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Início<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
+        <li class="dropdown"> <!-- MODOS -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Modos <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-align-justify"></span></a>
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <li><a href="../auxiliar/"><span class="glyphicon glyphicon-cog" aria-hidden="true" style="margin-left:20%"></span> Auxiliar</a></li>
+            <li><a href="../caixa/"><span class="glyphicon glyphicon-usd" aria-hidden="true" style="margin-left:20%"></span> Caixa</a></li>
+            <li><a href="../cozinha/"><span class="glyphicon glyphicon-cutlery" aria-hidden="true" style="margin-left:20%"></span> Cozinha</a></li>
+            <li><a href="../garcom/"><span class="glyphicon glyphicon-glass" aria-hidden="true" style="margin-left:20%"></span> Garçom</a></li>
+            <li><a href="../tele/"><span class="glyphicon glyphicon-send" aria-hidden="true" style="margin-left:20%"></span> Tele-Entrega</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"> <!-- CADASTROS -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Cadastros <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-pencil"></span></a>  
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <?php
+            $caminho='';
+             if(strpos($_SERVER['SCRIPT_NAME'],'cadastro')===false)
+                $caminho='../cadastro/';
+            ?>
+            <li><a href="<?php echo $caminho;?>cardapio.php"><span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="margin-left:20%"></span> Cardápio</a></li>
+            <li><a href="../cadastro/cliente.php"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-left:20%"></span> Clientes</a></li>
+            <li><a href="../cadastro/credor.php"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-left:20%"></span> Credor</a></li>
+            <li><a href="../cadastro/divida.php"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-left:20%"></span> Dívida</a></li>
+            <li><a href="cadastro/estoque.php"><span class="glyphicon glyphicon-tag" aria-hidden="true" style="margin-left:20%"></span> Estoque</a></li>
+            <li><a href="cadastro/mesa.php"><span class="glyphicon glyphicon-unchecked" aria-hidden="true" style="margin-left:20%"></span> Mesas</a></li>
+            <li><a href="cadastro/usuario.php"><span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-left:20%"></span> Usuários</a></li>
+          </ul>
+        </li>  
+        <li> <!-- RELATÓRIOS -->
+          <a href="relatorio/"> Relatórios <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-list-alt"></span></a>
+        </li>
+        <li class="dropdown"> <!-- CONFIGURAÇÕES -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Configurações <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
+          <ul class="dropdown-menu forAnimate" role="menu">
+            <li><a href="#" onclick="fazer_backup()"><span class="glyphicon glyphicon-hdd" aria-hidden="true" style="margin-left:20%"></span> Fazer Backup</a></li>
+              <div id="statusBackup"></div>
+            <li><a href="licenca.php"><span class="glyphicon glyphicon-flag" aria-hidden="true" style="margin-left:20%"></span> Licença</a></li>
+            <li><a href="ajustes/"><span class="glyphicon glyphicon-wrench" aria-hidden="true" style="margin-left:20%"></span> Ajustes</a></li>
+          </ul>
+        </li>
+        <li ><a href="http://www.evaldorc.com.br/logs/foodcontrol.php"> Sobre <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-info-sign"></span></a></li>
+        <li style="margin-top:40%" ><center> Olá <?php echo $_SESSION['login'];?><br><a href="#" onclick="logout()"> Sair</a></center></li>                
+      </ul>
+    </div>
+  </div>
+</nav>
